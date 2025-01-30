@@ -4,7 +4,7 @@ let authBtn,actionDropdown
 
 function setup(){
     banner=document.querySelector("#header .panel")
-    content=document.querySelector("#main")
+    content=document.querySelector("#content")
     content.addEventListener("scroll",ev=>{
         let ratio=ev.target.scrollTop/ev.target.scrollHeight
         banner.style.backgroundPosition=`0 ${Math.floor(ratio*100)}%`
