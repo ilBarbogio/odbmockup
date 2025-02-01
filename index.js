@@ -68,7 +68,7 @@ function generateCards(){
         let model=Math.random()>.5
         let click=model?"changeToDetail('model')":"changeToDetail('book')"
         lastCards.innerHTML+=`<div class="card">
-            <img src="./odbbanner.jpg" onclick="${click}">
+            <img src="https://picsum.photos/300" onclick="${click}">
             <span class="model" onclick="alert('Search model with this name')">${model?"model":"book"}</span>
             <span class="author" onclick="alert('Search this author name')">author</span>
             <span class="ear ${model?"model":"book"}"></span>
