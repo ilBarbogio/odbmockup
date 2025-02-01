@@ -509,7 +509,7 @@ input[type=text]{
     
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width: 50rem) {
   #header{
     .panel{
       div.title{
