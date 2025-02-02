@@ -68,7 +68,7 @@ function generateCards(){
         let model=Math.random()>.5
         let click=model?"changeToDetail('model')":"changeToDetail('book')"
         lastCards.innerHTML+=`<div class="card">
-            <img src="https://picsum.photos/${200 +i*10}/${200+i*10}" onclick="${click}">
+            <img src="https://picsum.photos/${200 +i*10+Math.floor(Math.random()*50)}/${200+i*10}" onclick="${click}">
             <span class="model" onclick="alert('Search model with this name')">${model?"model":"book"}</span>
             <span class="author" onclick="alert('Search this author name')">author</span>
             <span class="ear ${model?"model":"book"}"></span>
@@ -79,7 +79,7 @@ function generateCards(){
     modelCards.innerHTML=""
     for(let i=0;i<n;i++){
         modelCards.innerHTML+=`<div class="card">
-            <img src="https://picsum.photos/${200 +i*10}/${200+i*10}" onclick="changeToDetail('model')">
+            <img src="https://picsum.photos/${200 +i*10 +Math.floor(Math.random()*50)}/${200+i*10+Math.floor(Math.random()*50)}" onclick="changeToDetail('model')">
             <span class="model" onclick="alert('Search model with this name')">model</span>
             <span class="author" onclick="alert('Search this author name')">author</span>
             <span class="ear model"></span>
@@ -89,7 +89,7 @@ function generateCards(){
     bookCards.innerHTML=""
     for(let i=0;i<n;i++){
         bookCards.innerHTML+=`<div class="card">
-            <img src="https://picsum.photos/${200 +i*10}/${200+i*10}" onclick="changeToDetail('book')">
+            <img src="https://picsum.photos/${200 +i*10}/${200+i*10+Math.floor(Math.random()*50)}" onclick="changeToDetail('book')">
             <span class="model" onclick="alert('Go to this book page')">book</span>
             <span class="author" onclick="alert('Search this author name')">author</span>
             <span class="ear book"></span>
@@ -119,7 +119,7 @@ function generateDetail(kind){
     detailImages.innerHTML=""
     for(let i=0;i<Math.floor(Math.random()*3+1);i++){
         detailImages.innerHTML+=`
-        <img src=".https://picsum.photos/${200 +i*10}/${200+i*10}"/>`
+        <img src="https://picsum.photos/${200 +i*10}/${200+i*10}"/>`
     }
 
     let detailPubs=document.querySelector(".detail-content .pubs")
